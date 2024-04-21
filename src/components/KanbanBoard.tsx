@@ -1,17 +1,10 @@
-import PlusIcon from "../icons/PlusIcon";
 import { useMemo, useState } from "react";
 import { Column, Id, Task } from "../types";
 import ColumnContainer from "./ColumnContainer";
 import {
-  DndContext,
-  DragEndEvent,
-  DragOverEvent,
-  DragOverlay,
-  DragStartEvent,
-  PointerSensor,
-  useSensor,
-  useSensors,
+  DndContext, DragEndEvent, DragOverEvent, DragOverlay, DragStartEvent, PointerSensor, useSensor, useSensors,
 } from "@dnd-kit/core";
+
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
@@ -158,29 +151,6 @@ function KanbanBoard() {
                 ))}
               </SortableContext>
             </div>
-            {/* <button
-            onClick={() => {
-              createNewColumn();
-            }}
-            className="
-      h-[60px]
-      w-[350px]
-      min-w-[350px]
-      cursor-pointer
-      rounded-lg
-      bg-mainBackgroundColor
-      border-2
-      border-columnBackgroundColor
-      p-4
-      ring-rose-500
-      hover:ring-2
-      flex
-      gap-2
-      "
-          >
-            <PlusIcon />
-            Add Column
-          </button> */}
           </div>
 
           {createPortal(
@@ -237,14 +207,7 @@ function KanbanBoard() {
     setTasks(newTasks);
   }
 
-  // function createNewColumn() {
-  //   const columnToAdd: Column = {
-  //     id: generateId(),
-  //     title: `Column ${columns.length + 1}`,
-  //   };
 
-  //   setColumns([...columns, columnToAdd]);
-  // }
 
   function deleteColumn(id: Id) {
     const filteredColumns = columns.filter((col) => col.id !== id);

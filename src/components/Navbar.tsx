@@ -1,5 +1,4 @@
-import React from "react";
-import useOnlineStatus from "../utils/userOnlineStatus";
+import useOnlineStatus from "../utils/userOnlineStatus"
 import logo from "../icons/logo.png";
 import { Link } from "react-router-dom";
 

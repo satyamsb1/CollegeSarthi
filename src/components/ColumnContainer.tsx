@@ -147,21 +147,6 @@ function ColumnContainer({
               />
             )}
           </div>
-          {/* <button
-          onClick={() => {
-            deleteColumn(column.id);
-          }}
-          className="
-        stroke-gray-500
-        hover:stroke-white
-        hover:bg-columnBackgroundColor
-        rounded
-        px-1
-        py-2
-        "
-        >
-          <TrashIcon />
-        </button> */}
         </div>
 
         {/* Column task container */}
@@ -177,16 +162,6 @@ function ColumnContainer({
             ))}
           </SortableContext>
         </div>
-        {/* Column footer */}
-        {/* <button
-        className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
-        onClick={() => {
-          createTask(column.id);
-        }}
-      >
-        <PlusIcon />
-        Add task
-      </button> */}
       </div>
     </>
   );
