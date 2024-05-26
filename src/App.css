@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply text-black box-border;
+}
+@layer base {
+  body {
+    font-family: "Inter";
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#0c66e4] rounded-xl;
+}
+
+.task > ::-webkit-scrollbar-thumb {
+  @apply bg-[#0C66E4] rounded-xl;
+}
+.shadow-hover {
+  --shadow-color: #0c66e4;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 4px 6px -1px var(--shadow-color),
+    0 2px 4px -1px var(--shadow-color);
+}
