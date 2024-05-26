@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 
 const useOnlineStatus = () => {
-  const [onlineStatus, setOnlineStatus] = useState(true);
+  const [isLoggedIn, setLoginStatus] = useState(false);
   useEffect(() => {
-    window.addEventListener("offline", () => {
-      setOnlineStatus(false);
-    });
-    window.addEventListener("online", () => {
-      setOnlineStatus(true);
-    });
+    // window.addEventListener("offline", () => {
+    //   setLoginStatus(false);
+    // });
+    // window.addEventListener("online", () => {
+    //   setLoginStatus(true);
+    // });
+
+    if (localStorage.getItem("token")) {
+      setLoginStatus(true);
+    } else {
+      setLoginStatus(false);
+    }
   }, []);
 
-  return onlineStatus;
+  return isLoggedIn;
 };
 
 export default useOnlineStatus;
