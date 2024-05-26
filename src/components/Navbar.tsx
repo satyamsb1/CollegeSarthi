@@ -19,7 +19,11 @@ const Navbar = () => {
       </div>
       <div className="text-center justify-end gap-8 flex w-1/6 ">
         <div className="my-auto">
+<<<<<<< HEAD
           <h1>Pramod Patil</h1>
+=======
+          <h1>#staff201</h1>
+>>>>>>> origin/master
         </div>
         <div className="relative  w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
           <svg
